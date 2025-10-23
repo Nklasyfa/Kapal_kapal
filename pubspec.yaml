@@ -1,0 +1,35 @@
+name: kapal
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  video_player: ^2.2.0
+  chewie: ^1.2.2 
+  getwidget: ^7.0.0
+  shared_preferences: ^2.5.3
+  intl: ^0.20.2
+  geolocator: ^14.0.1
+  easy_localization: ^3.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Definisikan folder aset di sini
+  assets:
+    - assets/images/
+    - assets/videos/
+    - assets/lang/
