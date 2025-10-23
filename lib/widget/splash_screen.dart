@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       CurvedAnimation(parent: _controller, curve: const Interval(0.5, 1.0, curve: Curves.easeIn)),
     );
 
-    _controller.forward(); // Mulai animasi
+    _controller.forward(); 
     
     // Navigasi setelah animasi selesai
     Future.delayed(const Duration(seconds: 3), () {
@@ -55,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // Background Gradien seperti AppTheme utama (optional)
+        
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xFF977DFF), Color(0xFF0033FF)],
@@ -75,11 +75,26 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10), // Sedikit jarak setelah logo
+              // ✅ FIXED: Tambahkan nama aplikasi
               FadeTransition(
                 opacity: _opacityAnimation,
                 child: const Text(
-                  'by Nakula', // ✅ Branding
+                  'KAPAL LAWUTT',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    letterSpacing: 2,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              // ✅ Branding 'by Nakula'
+              FadeTransition(
+                opacity: _opacityAnimation,
+                child: const Text(
+                  'by Nakula', 
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.white70,
